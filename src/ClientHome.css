@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    background-color: #ffffff;
+    background-color: rgb(235,225,190);
+    height: 100%;
+    color: black;
+}
+
+@keyframes title-animation{
+    from {
+        color: rgb(98, 82, 72);
+        opacity: 0%;
+        left: -10%;
+    }
+    to {
+        color: black;
+        opacity: 100%;
+        left: 4%;
+    }
+}
+
+.title {
+    position: absolute;
+    top: 35%;
+    left: 4%;
+    padding: 50px;
+    animation-name: title-animation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    font-weight: 900;
+}
+
+.title h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+    text-shadow: 1.4px 1.4px 20px #654009;
+}
+
+.title p {
+    font-size: 30px;
+    font-weight: semi-bold;
+    margin: 0px;
+    padding: 25px 0px 5px 0px;
+    text-shadow: 1.2px 1.2px 20px #654009;
+}
+
+@media all and (max-width: 760px) {
+    @keyframes title-animation{
+        from {
+            color: rgb(98, 82, 72);
+            opacity: 0%;
+            left: -20%;
+        }
+        to {
+            color: black;
+            opacity: 100%;
+            left: -5%;
+        }
+    }
+
+    .title {
+        left: -5%;
+    }
+}
+
+p {
+    font-size: 18px;
+}
+
+.button {
+    font-size: 15px;
+    padding: 5px 40px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #ebebeb;
+    /* font-weight: bold; */
+}
+
+.button:active {
+    padding-top: 6px;
+    padding-bottom: 4px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.banner {
+    height: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.homeBox {
+    padding: 0px;
+    height: calc(100vh - 42px - 4vh);
+    height: calc(100svh - 42px - 4vh);
+    width: 100%;
+}
+
+.textBox {
+    text-align: center;
+}
+
+.emptyBox {
+    height: 100px;
+}
+
+.introBox {
+    gap: 10%;
+    height: 400px;
+    flex-wrap: wrap;
+}
+
+@media all and (max-width: 760px) {
+    .introBox {
+        height: 100%;
+    }
+}
+
+.menuBox {
+    height: 100%;
+    /* height: 1200px; */
+}
+
+.grayBg {
+    background-color: #eeeeee;
+}
+
+.whiteBg {
+    background-color: #ffffff;
+}
+
+.yellowBg {
+    background-color: #ffdbb9;
+}
+
+.homeImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(25%);
+}
+
+.introImg {
+    height: 80%;
+    max-height: 300px;
+}
+
+.menuImg {
+    width: 80vw;
+    max-width: 800px;
+    /* height: 100%; */
+}

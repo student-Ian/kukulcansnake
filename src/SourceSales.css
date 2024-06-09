@@ -1,0 +1,22 @@
+.tableBox {
+    width: 60%;
+    margin-top: 40px;
+}
+
+@media all and (max-width: 768px) {
+    .tableBox {
+        width: 90%;
+    }
+}
+
+.loadingBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.tableBox td,
+.tableBox th {
+    text-align: center;
+}

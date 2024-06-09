@@ -1,0 +1,134 @@
+/* ProductItem.css */
+
+.products-page {
+    padding: 0px 20px 20px 20px;
+    width: 60%;
+}
+
+@media only screen and (max-width: 600px) {
+    .products-page {
+        padding: 0px 20px 20px 20px;
+        width: 80%;
+    }
+}
+
+.products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-class-section {
+    font-weight: 900;
+    display: flex;
+    align-items: flex-start;
+    border-top: 1px solid #402f1f;
+}
+
+.description-column {
+    flex: 1 1;
+    margin-right: 20px;
+    padding: 20px 10px 10px 10px;
+    /* font-size: 2.8vh; */
+    font-size: calc(0.8vh + 1rem);
+    margin-bottom: 13vh;
+    letter-spacing: 1px;
+    color: #402f1f;
+}
+
+.items-column {
+    flex: 3;
+}
+
+.product-list {
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+@media all and (max-width: 800px) {
+    .description-column {
+        padding: 20px 0px 10px 0px;
+    }
+    .product-list {
+        gap: 0px;
+    }
+}
+
+.product-item {
+    padding: 20px 10px 10px 10px;
+    border-radius: 5px;
+    font-weight: 900;
+    /* font-size: 2.4vh; */
+    font-size: calc(0.6vh + 0.9rem);
+    color: #624111;
+    line-height: 1.8;
+    margin-bottom: 2vh;
+    width: 80px;
+}
+
+.product-item p {
+    margin: 5px 0;
+}
+
+.edit-product-link{
+    display: block;
+    padding: 10% 0 10% 0;
+    background-color: #dcd3b1;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: 1.6px solid #8a5a11;
+    border-radius: 5px;
+    height: 2vh;
+    margin: 1.4vh 0 0 0;
+}
+
+.add-product-link {
+    display: block;
+    padding: 10px 0 20px 0;
+    background-color: #dcd3b1;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border: 1.6px solid #8a5a11;
+    border-radius: 5px;
+    height: 2vh;
+    margin: 1.4vh 25% 0 25%;
+}
+
+
+.edit-product-link > img{
+    height: 120%;
+    margin-top: 0;
+    padding-bottom: 1.2vh;
+}
+
+.add-product-link > img{
+    height: 200%;
+    margin-top: 0;
+    padding-bottom: 1.6vh;
+}
+
+.edit-product-link:hover, .add-product-link:hover {
+    background-color: #b2a987;
+    border: 1.6px solid #381d00;
+    transition: 0.5s;
+}
+
+.productPrice{
+    color: #62411199;
+    /* font-size: 2.2vh; */
+    font-size: calc(0.5vh + 0.8rem);
+}
+
+.alcoholic {
+    color: #843018;
+    /* font-size: 1.8vh; */
+    font-size: calc(0.5vh + 0.5rem);
+    font-weight: 900;
+}

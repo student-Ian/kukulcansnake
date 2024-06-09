@@ -1,0 +1,337 @@
+.pageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pageTitle {
+    border: 3px solid #000000;
+    padding: 20px 80px;
+    margin: 60px
+}
+
+.order-form {
+    display: flex;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color: #E4C59E;
+    width: 80%;
+}
+
+.order-form h1 {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    margin: 20px auto;
+    /* border: 1px solid #ccc;
+    background-color: antiquewhite; */
+    width: 30%;
+    font-size: 25px;
+}
+
+.order-form > .success {
+    width: 100%;
+}
+
+.submittedPageLink {
+    text-decoration: none;
+    color: #1c32bd;
+}
+
+.order-form h2 {
+    padding: 10px;
+    margin: 10px;
+    text-align: right;
+    border: 1px solid #ccc;
+    background-color: antiquewhite;
+}
+
+.product-container {
+  /* Styles for the inner container */
+  width: 100%;
+  height: 100%;
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.rules {
+    margin: 10px 5%;
+}
+
+hr.ruleSplit {
+    border: 1px solid #000000;
+    border-radius: 50px;
+    width: 95%;
+    margin-bottom: 20px;
+}
+
+.orderFlow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.stages {
+    box-sizing: border-box;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid lightsalmon;
+    border-radius: 50%;
+    background-color: #e5e5e5;
+    /* background-color: #ebe1be; */
+}
+
+.currentStage {
+    width: 60px;
+    background-color: #ffffff;
+    background-color: #fcf7e7;
+    border-width: 4px;
+}
+
+.connect {
+    border: 1.5px solid lightsalmon;
+    width: 3.5%;
+    align-self: center;
+}
+
+.cartWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.customerInfoBox {
+    /* box-sizing: border-box;
+    border: 1px solid #000000; */
+    margin: 10px 0px 10px 5%;
+    width: 60%;
+}
+
+.error {
+    color: red;
+    font-size: 16px;
+    margin: 0px 0px 10px 40px;
+    /* text-align: center; */
+}
+
+@media all and (max-width: 766px) {
+    .error {
+        margin: 0px 0px 10px 0px;
+        text-align: center;
+    }
+}
+
+.formEntry {
+    margin: 5px 0px 30px 0px;
+}
+
+.formEntry > label{
+    font-size: 1.1rem;
+    margin-right: 1.2vw;
+}
+
+.entryInputBox {
+    /* width: 100%;
+    box-sizing: border-box;
+    height: 22px;
+    max-width: 270px;
+    min-width: 50px; */
+    border: 1.8px #cccccc solid;
+    border-radius: 8px;
+    padding: 0 12px;
+    width: 35vmin;
+    font-size: 0.9rem;
+    height: 2rem;
+    box-sizing:border-box;
+}
+
+.formEntry:has(> textarea.entryInputBox) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+textarea.entryInputBox {
+    height: 4rem;
+    width: 300px;
+    padding: 6px 8px;
+}
+
+.cartInfoBox {
+    background-color: #ebe1be;
+    border: 1.5px solid #000000;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 25%;
+    margin: 10px 5%;
+    align-self: flex-start;
+    min-width: 180px;
+}
+
+.cartInfoEntry {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartInfoBox.page1 {
+    position: sticky;
+    top: 20%;
+}
+
+.cartInfoBox p {
+    margin: 10px 0px;
+}
+
+.cartInfoSplit {
+    margin: 0px auto;
+    border: 1px solid #999999;
+    border-radius: 1px;
+}
+
+.buttonBox {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.buttonBox button {
+    padding: 5px 20px;
+    margin-bottom: 30px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.buttonBox button:hover {
+    padding-top: 6px;
+    padding-bottom: 4px;
+    background-color: #e0e0e0;
+}
+
+#memberDiscount {
+    width: 20px;
+    vertical-align: middle;
+    margin: -0.8vh 10px 0px 10px;
+}
+
+.lineLinkBox,
+.taiwanLinkBox {
+    display: flex;
+    align-items: center;
+    margin: 60px 0px 40px -10px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+.qr_code {
+    width: 200px;
+    height: 200px;
+}
+
+@media all and (max-width: 760px) {
+    .lineLinkBox,
+    .taiwanLinkBox {
+        justify-content: center;
+        margin: 40px 0px 30px -10px;
+    }
+
+    .qr_code {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* NOTE: version 1 */
+
+/* .confirmBox {
+    width: 70%;
+    margin: 20px auto 60px;
+    padding: 30px 50px;
+    border: 1.5px solid #000000;
+    border-radius: 10px;
+    background-color: #ebe1be;
+}
+
+.confirmBox hr {
+    border: 1px solid #000000;
+    border-radius: 50px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media all and (max-width: 520px) {
+    .confirmBox {
+        padding: 20px 30px;
+    }
+} */
+
+/* NOTE: version 2 */
+
+.confirmBox2 {
+    width: 70%;
+    margin: 20px auto 60px;
+    padding: 0px 50px;
+    border: 1.5px solid #999999;
+    border-radius: 5px;
+    background-color: #ebe1be;
+}
+
+.confirmBox2 hr {
+    border: 1px solid #999999;
+    border-bottom: none;
+    margin-left: -50px;
+    width: calc(100% + 99px);
+    margin-bottom: 20px;
+}
+
+.confirmEntry {
+    padding-left: 40px;
+    font-size: 16px;
+}
+
+@media all and (max-width: 520px) {
+    .confirmBox2 {
+        padding: 20px 30px;
+    }
+
+    .confirmBox2 hr {
+        margin-left: -30px;
+        width: calc(100% + 59px);
+    }
+}
+
+.noSelect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+.ruleTitle {
+    margin-left: -40px;
+}
+
+.t {
+    margin: -5px 20px 0px 0px;
+    font-weight: bold;
+}
+
+.stageText,
+.ruleTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

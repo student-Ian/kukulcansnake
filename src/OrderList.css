@@ -1,0 +1,147 @@
+.alert {
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    background-color: #008844;
+    color: #ffffff;
+    margin-bottom: 15px;
+    position: absolute;
+    top: 20px;
+    z-index: 100;
+    opacity: 1;
+    transition: opacity 0.4s;
+    display: none;
+}
+
+.closeBtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closeBtn:hover {
+    color: black;
+}
+
+.order-list {
+    font-family: Arial, sans-serif;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.order-list h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+@media all and (max-width: 830px) {
+    .order-list {
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .order-list h2 {
+        margin-left: 30px;
+        margin-bottom: 15px;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #ffffff99;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee95;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff95;
+}
+
+tr:hover {
+    background-color: #c8aa7730;
+}
+
+.clientOrderSearchWrapper {
+    width: 70%;
+}
+
+@media all and (max-width: 670px) {
+    .clientOrderSearchWrapper {
+        width: 90%;
+    }
+}
+
+.filter-row{
+    display: flex;
+    margin: 0 0 1.5vh 0;
+    align-items: center;
+}
+
+.filter-row > select, .filter-row > input{
+    border: 1.8px #cccccc solid;
+    border-radius: 8px;
+    padding: 0 12px;
+    font-size: 2.3vh;
+    font-size: calc(0.5vh + 0.8rem);
+    height: 5vh;
+    box-sizing: border-box;
+    margin: 0 1vw 0 0;
+}
+
+.filter-row > input{
+    width: 15vw;
+}
+
+
+.filter-row > label{
+    /* font-size: 2.5vh; */
+    font-size: calc(0.5vh + 0.8rem);
+    height: 5vh;
+    box-sizing: border-box;
+    padding: 0 0 0 8px;
+    display: flex;
+    margin-top: -1px;
+    align-items: center;
+}
+
+#hideFinish{
+    width: 20px;
+    height: 20px;
+    margin: 0 0.5vw 0 0;
+}
+
+.order-table a {
+    color: #8a5a11;
+}
+
+.order-table a:hover {
+    color: #442c08;
+}
+
+.statusSelect {
+    width: 100%;
+    min-width: 80px;
+    font-size: 1em;
+    padding: 0.5vh 0;
+    border: 1.8px #cccccc solid;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}

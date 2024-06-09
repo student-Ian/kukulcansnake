@@ -1,0 +1,15 @@
+/* App.css */
+.app-container {
+  display: flex;
+}
+
+.navigation {
+  width: 250px; /* Width of the sidebar */
+  height: 100vh;
+  background-color: #333; /* Sidebar background color */
+}
+
+.main-content {
+  flex: 1; /* Main content area takes up remaining space */
+  padding: 20px; /* Adjust padding as needed */
+}
