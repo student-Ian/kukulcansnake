@@ -14,6 +14,7 @@ import {AdminLayout} from "./Layout";
 import EditProductPage from "./EditProduct";
 import { Login } from "./Login";
 import { RequireAuth } from './RequireAuth';
+import Manual from './Manual';
 
 const url = 'https://script.google.com/macros/s/AKfycbxm7V8Y9af9txfn5nJAwl42DopwuS7OFRKOIeBF_1xZ6yTQZ_DhfJKYJ6kP7hfk_1u7/exec';
 
@@ -129,6 +130,7 @@ const AdminRoutes = () => {
                         element={<RequireAuth><ViewOrderPage productInfo={productInfo} orderInfo={orderInfo}
                                                 orderDetailInfo={orderDetailsInfo}/></RequireAuth>}
                     />
+                    <Route path="/manual" element={<RequireAuth><Manual/></RequireAuth>}/>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="*" element={<Navigate to="/admin" replace/>}/>
                 </Route>

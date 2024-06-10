@@ -62,6 +62,8 @@ export function AdminNavigation() {
                     <hr></hr>
                     <li><Link to="/source-sales" onClick={toggleNav}>管道銷售</Link></li>
                     <hr></hr>
+                    <li><Link to="/admin/manual" onClick={toggleNav}>操作說明</Link></li>
+                    <hr></hr>
                     {/*<li><Link to="/admin/test">Test Page</Link></li>*/}
                 </ul>
             </nav>
