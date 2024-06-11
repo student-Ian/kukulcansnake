@@ -79,6 +79,7 @@ function OrderForm({productInfo, fetch}) {
 
     const handleSubmitOrder = async (e) => {
         e.target.innerHTML = '送出中...';
+        e.target.disabled = true;
         try {
             // Prepare order data
             const orderData = items.map(item => {
