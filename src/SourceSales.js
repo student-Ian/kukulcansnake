@@ -7,7 +7,12 @@ const url = 'https://script.google.com/macros/s/AKfycbxm7V8Y9af9txfn5nJAwl42Dopw
 
 const SourceSales = () => {
     const [statistics, setStatistics] = useState({"yjs": ["-", "-"], "tls": ["-", "-"], "syy": ["-", "-"], "mlx": ["-", "-"], "yys": ["-", "-"], "xme": ["-", "-"]});
-    const currentMonth = new Date().getMonth() + 1;
+    const friday = new Date().getDay() === 5 || new Date().getDay() === 6
+                   ? new Date().getDate() - (new Date().getDay() + 2) + 7
+                   : new Date().getDate() - (new Date().getDay() + 2);
+    const fridayDate = new Date(new Date().setDate(friday));
+    const currentMonth = fridayDate.getMonth() + 1;
+    const currentWeek = Math.ceil(fridayDate.getDate() / 7);
 
     const fetchSourceStatistics = async () => {
         console.log("fetching source statistics...")
@@ -46,7 +51,7 @@ const SourceSales = () => {
                 <table>
                     <thead>
                         <tr>
-                            <th colSpan={7}>{currentMonth}月份管道銷售統計</th>
+                            <th colSpan={7}>{currentMonth}月份第{currentWeek}週管道銷售統計</th>
                         </tr>
                         <tr>
                             <th>管道</th>
