@@ -34,7 +34,7 @@ function Footer() {
                     <a href="https://line.me/ti/p/yMCeV3HcPw" target="_blank" rel="noopener noreferrer">
                         <img src={require("./image/line_icon.png")} alt="fb_icon" className="icon"/>
                     </a>
-                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=351pgban" target="_blank" rel="noopener noreferrer">
+                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=265fmmel" target="_blank" rel="noopener noreferrer">
                         <img src={require("./image/line_bot_icon.png")} alt="fb_icon" className="icon"/>
                     </a>
                 </div>

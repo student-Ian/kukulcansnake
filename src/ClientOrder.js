@@ -146,7 +146,7 @@ function OrderForm({productInfo, fetch}) {
                 <div className="order-form" style={{margin: "90px 0px 0px 0px"}}>
                     <h1 className="success">訂單送出成功！</h1>
                     <p style={{margin: "18px auto"}}>如有任何其他問題，歡迎查看<a href="/faq" className="submittedPageLink">FAQ</a>或聯絡我們</p>
-                    <p style={{margin: "18px auto 33px auto"}}>不想錯過優惠嗎？立即<a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=351pgban" className="submittedPageLink" target="_blank" rel="noopener noreferrer">加入line bot</a>！</p>
+                    <p style={{margin: "18px auto 33px auto"}}>不想錯過優惠嗎？立即<a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=265fmmel" className="submittedPageLink" target="_blank" rel="noopener noreferrer">加入line bot</a>！</p>
                 </div>
                 <div className="emptyBox"></div>
             </div>
