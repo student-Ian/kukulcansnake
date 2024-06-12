@@ -41,17 +41,19 @@ const OrderList = ({orderInfo, orderDetailInfo, refreshOrderList}) => {
     const filteredOrders = orderInfo.orders.filter(order => {
         if (hideFinished) {
             if (!filterColumn)
-                return order['status'] !== '已完成';
+                return order['status'] !== '已完成' && order['status'] !== '已取消';
             if (!filterValue)
-                return order['status'] !== '已完成';
+                return order['status'] !== '已完成' && order['status'] !== '已取消';
             const columnValue = order[filterColumn];
-            return columnValue && columnValue.toString().toLowerCase().includes(filterValue.toLowerCase()) && order['status'] !== '已完成';
+            return columnValue && columnValue.toString().toLowerCase().includes(filterValue.toLowerCase()) && order['status'] !== '已完成' && order['status'] !== '已取消';
         }
         else {
-            if (!filterColumn) return true; // If no column is selected, show all orders
-            if (!filterValue) return true;  // If no filter value provided, show all orders
+            if (!filterColumn)
+                return order['status'] !== '已取消'; // If no column is selected, show all orders
+            if (!filterValue)
+                return order['status'] !== '已取消';  // If no filter value provided, show all orders
             const columnValue = order[filterColumn];
-            return columnValue && columnValue.toString().toLowerCase().includes(filterValue.toLowerCase());
+            return columnValue && columnValue.toString().toLowerCase().includes(filterValue.toLowerCase()) && order['status'] !== '已取消';
         }
         });
 
@@ -70,6 +72,19 @@ const OrderList = ({orderInfo, orderDetailInfo, refreshOrderList}) => {
 
     const handleStatusChange = async (e, order_id, currentStatus) => {
         e.preventDefault();
+
+        if (currentStatus === '已取消' && e.target.value !== '已取消') {
+            alert("無法對已取消的訂單進行更改");
+            e.target.value = currentStatus;
+            return;
+        }
+        if (e.target.value === currentStatus) return;
+        if (e.target.value === '已取消') {
+            if (!window.confirm("注意：此操作不可復原，是否確定要取消訂單？")) {
+                e.target.value = currentStatus;
+                return;
+            }
+        }
 
         try {
             let newStatus = {status: ''};
@@ -91,6 +106,9 @@ const OrderList = ({orderInfo, orderDetailInfo, refreshOrderList}) => {
                 refreshOrderList();
                 document.querySelector('.alert').style.display = "block";
                 document.querySelector('.alert').style.opacity = 1;
+                // if alert is not closed after 3 seconds, close it automatically
+                setTimeout(function(){document.querySelector('.alert').style.opacity = 0;}, 3000);
+                setTimeout(function(){document.querySelector('.alert').style.display = "none";}, 3400);
             }
             else if (response.status !== 200) {
                 console.error("更改狀態失敗");
@@ -109,11 +127,13 @@ const OrderList = ({orderInfo, orderDetailInfo, refreshOrderList}) => {
     const getStatusColor = (status, defaultColor = '#fffd00') => {
         switch (status.toLowerCase()) {
             case '未完成':
-                return '#ff0000'; // Yellow for pending status
+                return '#ff0000'; // Red for pending status
             case '已完成':
-                return '#ff7100'; // Sky blue for processing status
+                return '#ff7100'; // Orange for processing status
             case '已出貨':
-                return '#0080ff'; // Light green for completed status
+                return '#0080ff'; // Sky blue for completed status
+            case '已取消':
+                return '#555555'; // Gray for cancelled status
             // Add more cases for other statuses as needed
             default:
                 return defaultColor; // Return default color if status doesn't match any condition
@@ -125,6 +145,8 @@ const OrderList = ({orderInfo, orderDetailInfo, refreshOrderList}) => {
     orderInfo.orders.forEach((order) => {
         const orderDetails = orderDetailInfo.order_details.filter(detail => detail.order_id === order.order_id);
         const name = order.name;
+        const status = order.status;
+        if (status === '已取消') return;
         if (!personStats[name]) {
             personStats[name] = {
                 count: 1,
@@ -242,6 +264,7 @@ const OrderList = ({orderInfo, orderDetailInfo, refreshOrderList}) => {
                                     <option value="未完成" style={{color: "#ff0000"}}>未完成</option>
                                     <option value="已出貨" style={{color: "#0080ff"}}>已出貨</option>
                                     <option value="已完成" style={{color: "#ff7100"}}>已完成</option>
+                                    <option value="已取消" style={{color: "#555555"}}>已取消</option>
                                 </select>
                             </td>
                             {/* Add more order details as needed */}
