@@ -34,7 +34,7 @@ const ViewOrderPage = ({productInfo, orderInfo, orderDetailInfo}) => {
                             <span>運費</span>
                             <span>管道</span>
                             <span>配達時間</span>
-                            <span>備註{order.note}</span>
+                            <span>備註</span>
                             <span>付款方式</span>
                             {order.payment === "轉帳" && <span>帳號末五碼</span>}
                         </div>
