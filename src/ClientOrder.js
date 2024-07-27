@@ -423,6 +423,7 @@ function OrderForm({productInfo, fetch}) {
                                         <option value="蔓蘿夏">蔓蘿夏</option>
                                         <option value="雲依姍">雲依姍</option>
                                         <option value="小米兒">小米兒</option>
+                                        <option value="宇治波">宇治波</option>
                                         <option value="被蛇蛇拐來的">被蛇蛇拐來的</option>
                                         <option value="其他">其他</option>
                                     </select>
@@ -449,6 +450,7 @@ function OrderForm({productInfo, fetch}) {
                                         name="note"
                                         value={note}
                                         onChange={e => setNote(e.target.value)}
+                                        placeholder='e.g. 不用湯匙'
                                     />
                                 </div>
                                 <div className="formEntry">

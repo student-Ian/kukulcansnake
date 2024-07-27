@@ -90,6 +90,11 @@ const SourceSales = () => {
                             <td>{statistics.xme[0]}</td>
                             <td>{statistics.xme[1]}</td>
                         </tr>
+                        <tr>
+                            <td>宇治波</td>
+                            <td>{statistics.yzb[0]}</td>
+                            <td>{statistics.yzb[1]}</td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
